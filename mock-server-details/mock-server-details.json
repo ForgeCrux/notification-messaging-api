@@ -1,0 +1,146 @@
+{
+  "microserviceId" : "6a82f3e36dbbd93a1267b548",
+  "mocks" : [ {
+    "id" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+    "microserviceId" : "6a82f3e36dbbd93a1267b548",
+    "specMetadataId" : "6a82f3faa6ae4f6c2c0ed437",
+    "apiSpecName" : "Notification & Messaging API",
+    "name" : "mock-notification-&-messaging-api",
+    "mockServiceName" : "mock-notification-&-messaging-api",
+    "mockServerUrl" : "https://forgesphere.probestack.io/mock-api/v1/api/mocks/mock-97055e36",
+    "responseLatencyMs" : 0,
+    "mockUrl" : "mock-97055e36",
+    "isPrivate" : true,
+    "delayMs" : 0,
+    "requestCount" : 7,
+    "createdAt" : "2026-08-17T11:44:13.241Z",
+    "updatedAt" : "2026-08-17T11:44:28.088Z",
+    "endpoints" : [ {
+      "id" : "54207041-8d60-426a-8532-f30bbdde30fb",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/notifications",
+      "method" : "GET",
+      "responseStatus" : 200,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.112Z",
+      "updatedAt" : "2026-08-17T11:44:28.113Z"
+    }, {
+      "id" : "433fa862-d292-4760-aad4-a6e94563211b",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/notifications",
+      "method" : "POST",
+      "responseStatus" : 202,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : "{\"notificationId\":\"string\",\"recipientId\":\"string\",\"channel\":\"EMAIL\",\"subject\":\"string\",\"message\":\"string\",\"templateId\":\"string\",\"priority\":\"LOW\",\"metadata\":{}}",
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.125Z",
+      "updatedAt" : "2026-08-17T11:44:28.126Z"
+    }, {
+      "id" : "87c34aea-3d8e-4570-8b4b-2263dbe1239f",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/notifications/{notificationId}",
+      "method" : "GET",
+      "responseStatus" : 200,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.136Z",
+      "updatedAt" : "2026-08-17T11:44:28.136Z"
+    }, {
+      "id" : "8667da38-9447-4b6a-997d-dbdd1774f71c",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/subscriptions",
+      "method" : "POST",
+      "responseStatus" : 201,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : "{\"recipientId\":\"string\",\"channel\":\"string\",\"enabled\":false,\"eventTypes\":[\"string\"]}",
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.179Z",
+      "updatedAt" : "2026-08-17T11:44:28.179Z"
+    }, {
+      "id" : "6cb9e27d-789a-46ea-a013-8c3d0ab7601f",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/templates",
+      "method" : "GET",
+      "responseStatus" : 200,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.145Z",
+      "updatedAt" : "2026-08-17T11:44:28.146Z"
+    }, {
+      "id" : "0d912c4c-492c-4391-9d93-e103e4ef2c87",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/templates",
+      "method" : "POST",
+      "responseStatus" : 201,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : "{\"templateId\":\"string\",\"name\":\"string\",\"channel\":\"EMAIL\",\"subject\":\"string\",\"content\":\"string\",\"variables\":[\"string\"]}",
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.156Z",
+      "updatedAt" : "2026-08-17T11:44:28.156Z"
+    }, {
+      "id" : "8d8db5fc-82d8-42b5-998c-fc63b010a87e",
+      "mockId" : "1084ab8c-f626-4dc8-89d7-61400c3226d7",
+      "path" : "/templates/{templateId}",
+      "method" : "GET",
+      "responseStatus" : 200,
+      "responseHeaders" : {
+        "Content-Type" : "application/json"
+      },
+      "responseBody" : "{}",
+      "delayMs" : 0,
+      "isActive" : true,
+      "requestBodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true,
+      "createdAt" : "2026-08-17T11:44:28.167Z",
+      "updatedAt" : "2026-08-17T11:44:28.168Z"
+    } ]
+  } ]
+}

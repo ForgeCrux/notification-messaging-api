@@ -1,0 +1,197 @@
+{
+  "info" : {
+    "name" : "notification-messaging-api Postman Collection",
+    "description" : "Send email, SMS and push notifications with templates and delivery tracking.\n\nOpenAPI version: 1.0.0",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth" : {
+    "type" : "bearer",
+    "bearer" : [ {
+      "key" : "token",
+      "value" : "{{accessToken}}",
+      "type" : "string"
+    } ]
+  },
+  "variable" : [ {
+    "key" : "baseUrl",
+    "value" : "https://api.example.com/notifications",
+    "type" : "string",
+    "description" : "Override with the base URL of the deployed Apigee proxy."
+  }, {
+    "key" : "accessToken",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "recipientId",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "status",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "channel",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "notificationId",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "templateId",
+    "value" : "",
+    "type" : "string"
+  } ],
+  "item" : [ {
+    "name" : "List notifications",
+    "request" : {
+      "method" : "GET",
+      "description" : "List notifications\n\nResponses:\n- 200: Notification list",
+      "header" : [ ],
+      "url" : {
+        "raw" : "{{baseUrl}}/notifications?recipientId={{recipientId}}&status={{status}}&channel={{channel}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "notifications" ],
+        "query" : [ {
+          "key" : "recipientId",
+          "value" : "{{recipientId}}",
+          "disabled" : true
+        }, {
+          "key" : "status",
+          "value" : "{{status}}",
+          "disabled" : true
+        }, {
+          "key" : "channel",
+          "value" : "{{channel}}",
+          "disabled" : true
+        } ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "Send notification",
+    "request" : {
+      "method" : "POST",
+      "description" : "Send notification\n\nResponses:\n- 202: Notification accepted",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json",
+        "type" : "text"
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      },
+      "url" : {
+        "raw" : "{{baseUrl}}/notifications",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "notifications" ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "Get notification status",
+    "request" : {
+      "method" : "GET",
+      "description" : "Get notification status\n\nResponses:\n- 200: Notification status",
+      "header" : [ ],
+      "url" : {
+        "raw" : "{{baseUrl}}/notifications/:notificationId",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "notifications", ":notificationId" ],
+        "variable" : [ {
+          "key" : "notificationId",
+          "value" : "{{notificationId}}"
+        } ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "List notification templates",
+    "request" : {
+      "method" : "GET",
+      "description" : "List notification templates\n\nResponses:\n- 200: Templates",
+      "header" : [ ],
+      "url" : {
+        "raw" : "{{baseUrl}}/templates",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "templates" ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "Create notification template",
+    "request" : {
+      "method" : "POST",
+      "description" : "Create notification template\n\nResponses:\n- 201: Template created",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json",
+        "type" : "text"
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      },
+      "url" : {
+        "raw" : "{{baseUrl}}/templates",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "templates" ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "Get template",
+    "request" : {
+      "method" : "GET",
+      "description" : "Get template\n\nResponses:\n- 200: Template",
+      "header" : [ ],
+      "url" : {
+        "raw" : "{{baseUrl}}/templates/:templateId",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "templates", ":templateId" ],
+        "variable" : [ {
+          "key" : "templateId",
+          "value" : "{{templateId}}"
+        } ]
+      }
+    },
+    "response" : [ ]
+  }, {
+    "name" : "Create notification subscription",
+    "request" : {
+      "method" : "POST",
+      "description" : "Create notification subscription\n\nResponses:\n- 201: Subscription created",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json",
+        "type" : "text"
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      },
+      "url" : {
+        "raw" : "{{baseUrl}}/subscriptions",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "subscriptions" ]
+      }
+    },
+    "response" : [ ]
+  } ]
+}
